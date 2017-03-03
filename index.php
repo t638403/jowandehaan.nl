@@ -1,3 +1,10 @@
+<?php
+
+include 'functions.php';
+
+$section = isset($_GET['type'])?h($_GET['type']):'home';
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,15 +29,15 @@
     <script src="/js/masonry.pkgd.min.js"></script>
 
 </head>
-<body>
+<body class="section-<?= $section ?>">
 
 <?php
 
     include(__DIR__ . '/header.php');
 
 	echo '<div id="content">';
-	$_GET['type'] = isset($_GET['type'])?$_GET['type']:'home';
-    switch($_GET['type']) {
+
+    switch($section) {
 
 		/**
 		 * HOME
@@ -89,37 +96,6 @@
 		});
 
 	};
-
-	function isScrollablContent() {
-		var $content = $('#content');
-		return ($content.find('.container').height() > $content.height());
-	}
-
-	function addScrollingClass() {
-
-		// Checking the difference between the container in the nav bar and the container in the #content section to
-		// prevent scroll bar issues
-		var diff = ($('nav > .container').offset().left - $('#content > .container').offset().left);
-
-		var $content = $('#content');
-		$content.removeClass('scrolling');
-		$content.css('padding-right', '20px');
-		if(isScrollablContent()) {
-			$content.css('padding-right', (diff - 2) + 'px');
-			$content.addClass('scrolling');
-		}
-	}
-
-
-
-	$(document).ready(function() {
-
-		addScrollingClass();
-
-
-
-	});
-	$(window).resize(addScrollingClass);
 
 </script>
 
