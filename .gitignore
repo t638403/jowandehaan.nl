@@ -1,0 +1,4 @@
+.git
+.idea
+*.([jJ][pP][gG]|[jJ][pP][eE][gG]|[pP][nN][gG]|[gG][iI][fF])
+**/*.([jJ][pP][gG]|[jJ][pP][eE][gG]|[pP][nN][gG]|[gG][iI][fF])
