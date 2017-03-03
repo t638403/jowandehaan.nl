@@ -1,3 +1,5 @@
+# Deze .htaccess is anders dan die op de live server, vanwegen password
+
 Options -Indexes
 Options -MultiViews
 RewriteEngine On
