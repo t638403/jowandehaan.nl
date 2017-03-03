@@ -28,7 +28,14 @@ function t($templateName, $templateVars = [])
 	return ob_get_clean();
 }
 
-function projectExists($projectName) {
+/**
+ * Check if project exists
+ *
+ * @param $projectName
+ * @return bool
+ */
+function projectExists($projectName)
+{
 	$dirs = scandir(__DIR__ . '/projects/');
 	foreach($dirs as $dir)
 	{
@@ -38,4 +45,19 @@ function projectExists($projectName) {
 		}
 	}
 	return false;
+}
+
+/**
+ * Like a template but then a project
+ *
+ * @param $projectName
+ */
+function p($projectName, $projectVars = [])
+{
+	$projectFile = dirname(__DIR__) . "/jowan/projects/$projectName/index.php";
+	extract($projectVars);
+	ob_start();
+	echo "<!-- Project '$projectName' -->";
+	include $projectFile;
+	return ob_get_clean();
 }
