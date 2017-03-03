@@ -1,0 +1,10 @@
+Options -Indexes
+Options -MultiViews
+RewriteEngine On
+
+# Anything with an extension like `.jpg`, `.svg`, `.css`, etc.
+RewriteRule ^/(.*?)\.([^/]*)$ /$1.$2 [L]
+RewriteRule ^studio /index.php?type=studio [L]
+RewriteRule ^about$ /index.php?type=about [L]
+RewriteRule ^overview$ /index.php?type=project_overview [L]
+RewriteRule ^project/([^/]*)$ /index.php?type=project&name=$1 [L]

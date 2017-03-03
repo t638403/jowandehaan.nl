@@ -1,0 +1,570 @@
+/***********************************************************************************************************************
+ * CORE
+ **********************************************************************************************************************/
+@font-face {
+    font-family: 'geomanist-book';
+    src: url('fonts/geomanist-book-webfont.eot');
+    src: url('fonts/geomanist-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/geomanist-book-webfont.woff2') format('woff2'),
+         url('fonts/geomanist-book-webfont.woff') format('woff'),
+         url('fonts/geomanist-book-webfont.ttf') format('truetype'),
+         url('fonts/geomanist-book-webfont.svg#geomanistregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'geomanist-light';
+    src: url('fonts/geomanist-light-webfont.eot');
+    src: url('fonts/geomanist-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/geomanist-light-webfont.woff2') format('woff2'),
+         url('fonts/geomanist-light-webfont.woff') format('woff'),
+         url('fonts/geomanist-light-webfont.ttf') format('truetype'),
+         url('fonts/geomanist-light-webfont.svg#geomanistregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	padding: 0;
+	margin-top: 70px;
+	font-family: 'geomanist-book', sans-serif;
+	background-color: #f0f0f0;
+}
+
+.header {
+	background-color: orange;
+}
+
+.footer {
+	height: 50px;
+	background-color: purple;
+	color: white;
+}
+
+img {
+	max-width: 100%;
+}
+
+h2 {
+	font-family: 'geomanist-book', sans-serif;
+	font-size: 1.8em;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	letter-spacing: 1.2px;
+
+}
+
+p {
+	font-family: 'geomanist-light', sans-serif;
+	font-size: 1em;
+	line-height: 1.4em;
+	letter-spacing: 1px;
+	margin-bottom: 50px;
+}
+
+h3 {
+	font-family: 'geomanist-book';
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 2em;
+	text-align: center;
+	line-height: 1em;
+}
+
+h5 {
+	margin-top: 5px;
+	text-align: center;
+	font-family: 'geomanist-light';
+	letter-spacing: 0.5px;
+}
+
+
+.tags {
+	margin-top: 5px;
+	font-family: 'geomanist-light';
+	font-size: 0.8em;
+	letter-spacing: 0.8px;
+}
+
+.container {
+	padding-left: 20px;
+	padding-right: 20px;
+	/*background-color: red;*/
+}
+.row
+{
+	margin-left: -20px;
+	margin-right: -20px;
+}
+[class^="col-"] {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+/***********************************************************************************************************************
+ * NAVBAR
+ **********************************************************************************************************************/
+
+body > .navbar {
+	margin-bottom: 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+
+.container-fluid>.navbar-collapse,
+.container-fluid>.navbar-header,
+.container>.navbar-collapse,
+.container>.navbar-header {
+	margin-right: -20px;
+	margin-left: -20px;
+}
+
+.navbar>.container .navbar-brand,
+.navbar>.container-fluid .navbar-brand h6 a,
+.navbar>.container-fluid .navbar-brand h6 a:hover,
+.navbar>.container-fluid .navbar-brand h6 a:focus
+{
+	display: inline;
+	padding-left: 0;
+	margin-left: 0;
+	font-size:2em;
+	color: black !important;
+}
+
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover
+{
+	background-color: transparent;
+}
+.navbar-inverse .navbar-toggle:focus .icon-bar,
+.navbar-inverse .navbar-toggle:hover .icon-bar
+{
+	background-color: #696969;
+}
+
+.navbar-inverse .navbar-nav>li>a,
+.navbar-inverse .navbar-nav>li>a:focus
+{
+	color: #9d9d9d;
+}
+.navbar-inverse .navbar-nav>li>a:hover
+{
+	color: #696969;
+}
+.navbar-inverse .navbar-nav>li>a.active,
+{
+	color: black;
+}
+
+.navbar-inverse.navbar-fixed-top {
+	border-radius: 0px;
+	border: none;
+	background-color: white;
+	height: 70px;
+}
+
+.navbar .navbar-nav a {
+	font-size: 1.3em;
+    padding-right: 0px;
+    padding-left: 30px;
+    padding-top: 28px;
+}
+.navbar .navbar-nav.social li a {
+    padding-left: 10px;
+}
+
+/* Larger padding for facebook icon  */
+.navbar .navbar-nav.social {
+	padding-left: 50px;
+	margin-right: 20px;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+	border: none;
+}
+
+.navbar-inverse .navbar-form {
+	background-color: white;
+	float: left;
+	width: 100%;
+	border-top: 0px;
+}
+
+
+.navbar-inverse .navbar-nav > a:focus {
+    color: black;
+    background-color: white;
+}
+
+.navbar .container {
+	max-height: 100%;
+}
+
+.navbar p {
+	font-family: 'geomanist', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.3em;
+	letter-spacing: 0px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+	color: black;
+	display: inline;
+}
+
+.container-fluid>.navbar-collapse,
+.container-fluid>.navbar-header,
+.container>.navbar-collapse,
+.container>.navbar-header
+{
+	max-height: 100%;
+}
+
+a.navbar-brand {
+	display: inline;
+}
+
+.navbar img {
+	height: 50px;
+	display: inline;
+	margin-right: 5px;
+	margin-top: -5px;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: black;
+}
+
+.container .navbar-collapse > div {
+	display: inline-block;
+}
+
+@media (max-width: 767px) {
+
+	.navbar-fixed-bottom .navbar-collapse,
+	.navbar-fixed-top .navbar-collapse
+	{
+		max-height: none;
+	}
+
+	.navbar-inverse .navbar-collapse {
+		margin: 0 0 0 -20px;
+		padding: 0;
+		width: calc(100% + 40px);
+	}
+
+	.navbar-nav {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.navbar-nav li {
+		text-align: center;
+	}
+	.navbar .navbar-nav.social {
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		width: 106px;
+	}
+	.navbar-nav.social li {
+		display: inline-block;
+		float: left;
+		text-align: center;
+		margin: 0 5px;
+	}
+
+	.container .navbar-collapse > div {
+		display: block;
+		width: 100%;
+		overflow: auto;
+		background-color: white;
+		border-top: 1px solid #eaeaea;
+	}
+	.container .navbar-collapse .navbar-nav li a {
+		font-size: 2em;
+		margin: 30px 0;
+		padding: 0;
+	}
+
+	.container .navbar-collapse .navbar-nav.social li a {
+		margin: 15px 0 35px 0;
+	}
+
+	.navbar .container {
+		margin: 0;
+	}
+
+	.container h6 {
+		overflow: auto;
+	}
+
+	.container .navbar-header button {
+		padding-right: 0;
+		margin-right: 0;
+		margin-top: 19px;
+		border: none;
+	}
+
+
+
+}
+
+/***********************************************************************************************************************
+ * JUMBOTRON
+ **********************************************************************************************************************/
+
+.jumbotron {
+	position: relative;
+	background-color: blue;
+	color: white;
+	margin-bottom:  0px;
+	width: calc(100% + 20px);
+	padding-right: 20px;
+}
+
+.jumbotron h1 {
+	line-height: 1em;
+	/*font-size: 7vh;*/
+	font-size: 5vh;
+}
+
+/***********************************************************************************************************************
+ * PROJECT-OVERVIEW
+ **********************************************************************************************************************/
+
+.grid-item:hover .item-title {
+	display: block;
+}
+
+.grid-item:hover .item-image {
+	display: none;
+}
+
+.item-title {
+	position: absolute;
+	display: none;
+	top: 0;
+  	left: 0;
+  	padding: 15px 10px;
+	background-color: black;
+  	width: 100%;
+  	height: 100%;
+  	color: white;
+  	font-weight: 700;
+  	transition: 1s;
+}
+
+.item-title-text {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) 
+  translateY(-50%);
+  text-align: center;
+
+}
+
+.grid {
+	margin-bottom: 40px;
+	padding-top: 40px;
+}
+
+.grid-background {
+
+}
+
+.item-image {
+	position: absolute;
+}
+
+.grid-item { 
+	width: calc(100% / 3 - 60px / 3);
+	margin-bottom: 20px;
+}
+
+.grid-item:last-child {
+	margin-bottom: 0;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.grid {
+		margin-left: 0;
+		padding-top: 20px;
+		margin-bottom: 20px;
+	}
+	.grid-item {
+		width: calc( (100% / 2) - 15px );
+	}
+
+	.grid-item:hover .item-title {
+		display: none;
+	}
+	.grid-item:hover .item-image {
+		display: block;
+	}
+}
+
+@media (max-width: 767px) {
+	.grid {
+		margin-left: 0;
+		padding-top: 20px;
+		margin-bottom: 20px;
+	}
+	.grid-item {
+		width: 100%;
+	}
+	.grid-item:hover .item-title {
+		display: none;
+	}
+	.grid-item:hover .item-image {
+		display: block;
+	}
+}
+
+/***********************************************************************************************************************
+ * PROJECT-DETAIL
+ **********************************************************************************************************************/
+
+.project {
+	background-color: gray;
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+
+.project-image {
+	margin-bottom: 30px;
+	box-shadow: -1px 2px 6px 2px rgba(0,0,0,0.15);
+}
+
+.project-image:last-child {
+	margin-bottom: 30px;
+	box-shadow: -1px 2px 6px 2px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 767px) {
+	.project {
+		width: 100%;
+		padding-top: 20px;
+	}
+}
+
+/***********************************************************************************************************************
+ * PROJECT PROJECT 1
+ **********************************************************************************************************************/
+.project1 {
+	background-color: rgba(255, 188, 182, 1);
+	color: white;
+}
+
+.project1 hr {
+	border-top: solid white 1px;
+}
+
+/***********************************************************************************************************************
+ * PROJECT DINGES
+ **********************************************************************************************************************/
+.dinges {
+	background-color: rgba(92, 136, 157, 1);
+	color: white;
+}
+
+/***********************************************************************************************************************
+ * PROJECT RICKEY
+ **********************************************************************************************************************/
+.rickey {
+	background-color: rgba(233, 233, 233, 1);
+	color: black;
+}
+
+
+/***********************************************************************************************************************
+ * PROJECT 
+ **********************************************************************************************************************/
+.isometric {
+	background-color: black;
+	color: white;
+}
+
+/***********************************************************************************************************************
+ * STUDIO
+ **********************************************************************************************************************/
+
+#studio {
+	color: black;
+	padding-top: 40px;
+}
+
+.studio-image {
+	margin-bottom: 30px;
+}
+
+.studio-image:last-child {
+	margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+	#studio {
+		padding-top: 20px;
+	}
+}
+
+/***********************************************************************************************************************
+ * ABOUT
+ **********************************************************************************************************************/
+
+#about {
+	padding-top: 40px;
+	color: black;
+}
+@media (max-width: 767px) {
+	#about {
+		padding-top: 20px;
+	}
+}
+/***********************************************************************************************************************
+ * CONTENT
+ **********************************************************************************************************************/
+#content {
+	position: fixed;
+	top: 70px;
+	height: calc(100% - (70px + 25px) ); /* 100% - (header + footer) */
+	overflow: auto;
+	margin-bottom: 0;
+	width: 100%;
+	width: calc(100% + 20px);
+	padding-right: 20px;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767px) {
+	#content {
+		width: calc(100% + 20px);
+		padding-right: 20px;
+	}
+}
+
+/***********************************************************************************************************************
+ * FOOTER
+ **********************************************************************************************************************/
+#footer {
+	height: 25px;
+	width: 100%;
+	position: fixed;
+	top: calc(100% - 25px);
+	overflow: hidden;
+	background-color: black;
+	color: white;
+	font-family: 'geomanist-light', sans-serif;
+	font-size:0.8em;
+	line-height: 25px;
+}
