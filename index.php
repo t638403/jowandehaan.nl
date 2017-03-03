@@ -1,6 +1,6 @@
 <?php
 
-include 'functions.php';
+include "functions.php";
 
 $section = isset($_GET['type'])?h($_GET['type']):'home';
 
@@ -60,7 +60,7 @@ $section = isset($_GET['type'])?h($_GET['type']):'home';
          * PROJECTS
          */
         case 'project':
-            include(__DIR__ . '/project.php');
+            echo t('project', ["name" => $_GET["name"]]);
             include(__DIR__ . '/project_overview.php');
 //            include(__DIR__ . '/footer.php');
             break;
