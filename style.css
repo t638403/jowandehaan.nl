@@ -324,7 +324,7 @@ a.navbar-brand {
 	}
 
 	.navbar-inverse .navbar-collapse {
-		margin: 0 0 0 -20px;
+		margin: 0 0 0 0;
 		padding: 0;
 		width: calc(100% + 40px);
 	}
