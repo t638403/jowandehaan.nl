@@ -1,12 +1,12 @@
 <div class="row">
 
-  <div class="col-sm-4">
-   <h2>24 uur Rotterdamse Schouwburg</h2>
-<p>Voor de seizoensgids 15/16 van de Rotterdamse Schouwburg dook ik onder in de wereld van het theater en schetste 24 uur Rotterdamse Schouwburg.</p>
-<hr style="border-top: solid black 1px;"">
-<div class="tags">Illustration, Screenprint</div>
+  <div class="col-sm-3">
+   <h4>De Rickey's</h4>
+<p>Drie illustraties voor tijdelijke vervanging kunstwerk aan de voorgevel van de Rotterdamse Schouwburg.</p>
   </div>
-
+<div class="col-sm-1">
+   
+  </div>
     <div class="col-sm-8">
     <img class="project-image" src="/images/rickey/rickey2.png">
   </div>
@@ -39,4 +39,4 @@
 
 </div>
 
-
+<hr>

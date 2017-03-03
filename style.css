@@ -26,11 +26,39 @@
 
 }
 
+@font-face {
+    font-family: 'geomanist-black';
+    src: url('fonts/geomanist-black-webfont.eot');
+    src: url('fonts/geomanist-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/geomanist-black-webfont.woff2') format('woff2'),
+         url('fonts/geomanist-black-webfont.woff') format('woff'),
+         url('fonts/geomanist-black-webfont.ttf') format('truetype'),
+         url('fonts/geomanist-black-webfont.svg#geomanistregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'geomanist-medium';
+    src: url('fonts/geomanist-medium-webfont.eot');
+    src: url('fonts/geomanist-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/geomanist-medium-webfont.woff2') format('woff2'),
+         url('fonts/geomanist-medium-webfont.woff') format('woff'),
+         url('fonts/geomanist-medium-webfont.ttf') format('truetype'),
+         url('fonts/geomanist-medium-webfont.svg#geomanistregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
 	padding: 0;
 	margin-top: 70px;
-	font-family: 'geomanist-book', sans-serif;
-	background-color: #f0f0f0;
+	font-size: 14px;
+	/*overflow-y: scroll;*/
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 
 .header {
@@ -47,39 +75,67 @@ img {
 	max-width: 100%;
 }
 
-h2 {
-	font-family: 'geomanist-book', sans-serif;
-	font-size: 1.8em;
-	margin-top: 0px;
-	margin-bottom: 15px;
-	letter-spacing: 1.2px;
 
-}
 
 p {
 	font-family: 'geomanist-light', sans-serif;
-	font-size: 1em;
-	line-height: 1.4em;
+	font-size: 0.9em;
+	line-height: 1.6em;
 	letter-spacing: 1px;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
+}
+
+h1 {
+	font-family: 'geomanist-medium', sans-serif;
+	font-size: 0.8em;
+	letter-spacing: 0.8px;
+	margin-top: 0px;
+	letter-spacing: 0.8px;
+	display: inline;
+	margin-right: 0px;
+}
+
+h2 {
+	font-family: 'geomanist-light', sans-serif;
+	font-size: 0.8em;
+	margin-top: 0px;
+	letter-spacing: 0.8px;
+	display: inline;
 }
 
 h3 {
-	font-family: 'geomanist-book';
+	font-family: 'geomanist-medium';
 	margin-top: 0px;
 	margin-bottom: 0px;
-	font-size: 2em;
-	text-align: center;
-	line-height: 1em;
-}
-
-h5 {
-	margin-top: 5px;
-	text-align: center;
-	font-family: 'geomanist-light';
+	font-size: 1em;
+	/*text-align: center;*/
+	line-height: 1.3em;
+	color: black;
 	letter-spacing: 0.5px;
+	text-transform: uppercase;
 }
 
+
+h4 {
+	font-family: 'geomanist-medium';
+	margin-top: 0px;
+	margin-bottom: 15px;
+	font-size: 1em;
+	/*text-align: center;*/
+	line-height: 1.3em;
+	color: black;
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+	
+}
+
+caption {
+	font-family: 'geomanist-light', sans-serif;
+	font-size: 0.5em;
+	line-height: 1.7em;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
 
 .tags {
 	margin-top: 5px;
@@ -98,10 +154,22 @@ h5 {
 	margin-left: -20px;
 	margin-right: -20px;
 }
-[class^="col-"] {
+[class*="col-"] {
 	padding-left: 20px;
 	padding-right: 20px;
 }
+
+@media (max-width: 992px) {
+		h2 {
+			display: none;
+		}
+	}		
+
+@media (max-width: 768px) {		
+		h1 {
+			font-size: 1.15em;
+		}
+	}
 /***********************************************************************************************************************
  * NAVBAR
  **********************************************************************************************************************/
@@ -117,8 +185,8 @@ body > .navbar {
 .container-fluid>.navbar-header,
 .container>.navbar-collapse,
 .container>.navbar-header {
-	margin-right: -20px;
-	margin-left: -20px;
+	margin-right: 0px;
+	margin-left: 0px;
 }
 
 .navbar>.container .navbar-brand,
@@ -129,8 +197,8 @@ body > .navbar {
 	display: inline;
 	padding-left: 0;
 	margin-left: 0;
-	font-size:2em;
 	color: black !important;
+
 }
 
 .navbar-inverse .navbar-toggle:focus,
@@ -149,11 +217,12 @@ body > .navbar {
 {
 	color: #9d9d9d;
 }
+
 .navbar-inverse .navbar-nav>li>a:hover
 {
 	color: #696969;
 }
-.navbar-inverse .navbar-nav>li>a.active,
+.navbar-inverse .navbar-nav>li>a.active
 {
 	color: black;
 }
@@ -166,7 +235,10 @@ body > .navbar {
 }
 
 .navbar .navbar-nav a {
-	font-size: 1.3em;
+	font-family: 'geomanist-light';
+	text-transform: uppercase;
+	font-size: 1.02em;
+	letter-spacing: 0.8px;
     padding-right: 0px;
     padding-left: 30px;
     padding-top: 28px;
@@ -177,8 +249,8 @@ body > .navbar {
 
 /* Larger padding for facebook icon  */
 .navbar .navbar-nav.social {
-	padding-left: 50px;
-	margin-right: 20px;
+	padding-left: 35px;
+	/*margin-right: 29px;*/
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
@@ -220,16 +292,18 @@ body > .navbar {
 .container>.navbar-header
 {
 	max-height: 100%;
+	max-width: 100%;
 }
 
 a.navbar-brand {
 	display: inline;
+	height: 100%;
 }
 
 .navbar img {
-	height: 50px;
+	height: 25px;
 	display: inline;
-	margin-right: 5px;
+	margin-right: 10px;
 	margin-top: -5px;
 }
 
@@ -284,8 +358,8 @@ a.navbar-brand {
 		border-top: 1px solid #eaeaea;
 	}
 	.container .navbar-collapse .navbar-nav li a {
-		font-size: 2em;
-		margin: 30px 0;
+		font-size: 1.15em;
+		margin: 20px 0;
 		padding: 0;
 	}
 
@@ -308,8 +382,6 @@ a.navbar-brand {
 		border: none;
 	}
 
-
-
 }
 
 /***********************************************************************************************************************
@@ -318,17 +390,29 @@ a.navbar-brand {
 
 .jumbotron {
 	position: relative;
-	background-color: blue;
-	color: white;
+	background-color: white;
+	color: black;
+	text-align: center;
 	margin-bottom:  0px;
 	width: calc(100% + 20px);
-	padding-right: 20px;
+	/*padding-right: 20px;
+	padding-bottom: 60px;*/
 }
 
 .jumbotron h1 {
-	line-height: 1em;
-	/*font-size: 7vh;*/
-	font-size: 5vh;
+	font-family: 'geomanist-light';
+	line-height: 1.2em;
+	font-size: 1.1em;
+}
+
+.jumbotron a {
+	color: black;
+	font-family: 'geomanist-light';
+}
+
+.jumbotron a:hover {
+	color: grey;
+	font-family: 'geomanist-light';
 }
 
 /***********************************************************************************************************************
@@ -344,27 +428,33 @@ a.navbar-brand {
 }
 
 .item-title {
-	position: absolute;
+	/* position: absolute;
 	display: none;
 	top: 0;
-  	left: 0;
-  	padding: 15px 10px;
-	background-color: black;
+  	left: 0; */
+  	padding: 10px 0 0 0px;
+	background-color: rgba(255,255,255,1); 
   	width: 100%;
   	height: 100%;
-  	color: white;
-  	font-weight: 700;
+  	color: black;
   	transition: 1s;
 }
 
 .item-title-text {
-  position:absolute;
+  /* position:absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) 
   translateY(-50%);
-  text-align: center;
+  text-align: center; */
+}
 
+a:hover .item-title {
+	color: black;
+}
+
+a:-webkit-any-link {
+	text-decoration: none;
 }
 
 .grid {
@@ -382,7 +472,11 @@ a.navbar-brand {
 
 .grid-item { 
 	width: calc(100% / 3 - 60px / 3);
-	margin-bottom: 20px;
+	margin-bottom: 30px;
+}
+
+.grid-item:hover {
+	color: black;
 }
 
 .grid-item:last-child {
@@ -435,20 +529,16 @@ a.navbar-brand {
  **********************************************************************************************************************/
 
 .project {
-	background-color: gray;
-	padding-top: 40px;
-	padding-bottom: 20px;
+	background-color: white;
+	padding-top: 30px;
+	padding-bottom: 0px;
 }
 
 .project-image {
-	margin-bottom: 30px;
-	box-shadow: -1px 2px 6px 2px rgba(0,0,0,0.15);
+	margin-bottom: 40px;
+	/* ox-shadow: -1px 2px 6px 2px rgba(0,0,0,0.15); */
 }
 
-.project-image:last-child {
-	margin-bottom: 30px;
-	box-shadow: -1px 2px 6px 2px rgba(0,0,0,0.15);
-}
 
 @media (max-width: 767px) {
 	.project {
@@ -457,42 +547,92 @@ a.navbar-brand {
 	}
 }
 
+hr {
+	margin: 0px 0px;
+	border-top: 1px solid lightgrey;
+}
+
 /***********************************************************************************************************************
- * PROJECT PROJECT 1
+ * PROJECT DOKWERK
  **********************************************************************************************************************/
-.project1 {
-	background-color: rgba(255, 188, 182, 1);
-	color: white;
-}
-
-.project1 hr {
-	border-top: solid white 1px;
+.dokwerk {
+	/*background-color: #f6f6f6;*/
+	color: black;
 }
 
 /***********************************************************************************************************************
- * PROJECT DINGES
+ * PROJECT MACHINE CUISINE
  **********************************************************************************************************************/
-.dinges {
-	background-color: rgba(92, 136, 157, 1);
-	color: white;
+.happynewyear {
+	/*background-color: #f6f6f6;*/
+	color: black;
 }
 
 /***********************************************************************************************************************
- * PROJECT RICKEY
+ * PROJECT MACHINE CUISINE
  **********************************************************************************************************************/
 .rickey {
-	background-color: rgba(233, 233, 233, 1);
+	/*background-color: #f6f6f6;*/
+	color: black;
+}
+
+/***********************************************************************************************************************
+ * PROJECT SCHOUWBURG
+ **********************************************************************************************************************/
+.schouwburg {
+	/*background-color: #f6f6f6;*/
+	color: black;
+}
+
+/***********************************************************************************************************************
+ * PROJECT DRUKDRUKDRUK
+ **********************************************************************************************************************/
+.drukdrukdruk {
+	/*background-color: #f6f6f6;*/
+	color: black;
+}
+
+/***********************************************************************************************************************
+ * PROJECT FAAS
+ **********************************************************************************************************************/
+.faas{
+	/*background-color: #f6f6f6;*/
+	color: black;
+}
+
+/***********************************************************************************************************************
+ * PROJECT DRAWING
+ **********************************************************************************************************************/
+.drawing {
+	/*background-color: #f6f6f6;*/
+	color: black;
+}
+
+/***********************************************************************************************************************
+ * PROJECT catwoman
+ **********************************************************************************************************************/
+.catwoman {
+	/*background-color: #f6f6f6;*/
+	color: black;
+}
+
+/***********************************************************************************************************************
+ * PROJECT SCHELDEGROEP
+ **********************************************************************************************************************/
+.scheldegroep {
+	/*background-color: #f6f6f6;*/
+	color: black;
+}
+
+/***********************************************************************************************************************
+ * PROJECT VLISSINGENVLOOIT
+ **********************************************************************************************************************/
+.vlissingenvlooit {
+	/*background-color: #f6f6f6;*/
 	color: black;
 }
 
 
-/***********************************************************************************************************************
- * PROJECT 
- **********************************************************************************************************************/
-.isometric {
-	background-color: black;
-	color: white;
-}
 
 /***********************************************************************************************************************
  * STUDIO
@@ -504,17 +644,29 @@ a.navbar-brand {
 }
 
 .studio-image {
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 }
 
 .studio-image:last-child {
+	margin-bottom: 40px;
+}
+
+.col-side {
 	margin-bottom: 30px;
 }
 
-@media (max-width: 767px) {
+/*#studio p {
+	font-family: 'geomanist-book';
+	line-height: 1.3em;
+	letter-spacing: 0px;
+	font-size: 1.5em;
+}*/
+
+@media (max-width: 768px) {
 	#studio {
 		padding-top: 20px;
 	}
+
 }
 
 /***********************************************************************************************************************
@@ -525,11 +677,20 @@ a.navbar-brand {
 	padding-top: 40px;
 	color: black;
 }
+
+/*#about p {
+	font-family: 'geomanist-book';
+	line-height: 1.2em;
+	letter-spacing: 0px;
+	font-size: 4em;
+}*/
+
 @media (max-width: 767px) {
 	#about {
 		padding-top: 20px;
 	}
 }
+
 /***********************************************************************************************************************
  * CONTENT
  **********************************************************************************************************************/
@@ -542,8 +703,6 @@ a.navbar-brand {
 	width: 100%;
 	width: calc(100% + 20px);
 	padding-right: 20px;
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 767px) {
@@ -559,6 +718,7 @@ a.navbar-brand {
 #footer {
 	height: 25px;
 	width: 100%;
+	padding-right: 25px; 
 	position: fixed;
 	top: calc(100% - 25px);
 	overflow: hidden;
@@ -566,5 +726,6 @@ a.navbar-brand {
 	color: white;
 	font-family: 'geomanist-light', sans-serif;
 	font-size:0.8em;
-	line-height: 25px;
+	line-height: 27px;
+	text-align: right;
 }
