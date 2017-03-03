@@ -38,7 +38,7 @@
 		case 'home':
 			/*include(__DIR__ . '/jumbotron.php');*/
 			include(__DIR__ . '/project_overview.php');
-			include(__DIR__ . '/footer.php');
+//			include(__DIR__ . '/footer.php');
 			break;
 
         /**
@@ -46,7 +46,7 @@
          */
         case 'about':
             include(__DIR__ . '/about.php');
-            include(__DIR__ . '/footer.php');
+//            include(__DIR__ . '/footer.php');
             break;
 
         /**
@@ -55,7 +55,7 @@
         case 'project':
             include(__DIR__ . '/project.php');
             include(__DIR__ . '/project_overview.php');
-            include(__DIR__ . '/footer.php');
+//            include(__DIR__ . '/footer.php');
             break;
 
         /**
@@ -64,7 +64,7 @@
         case 'project_overview':
         default:
             include(__DIR__ . '/project_overview.php');
-            include(__DIR__ . '/footer.php');
+//            include(__DIR__ . '/footer.php');
             break;
 
         /**
@@ -72,10 +72,8 @@
          */
         case 'studio':
         include(__DIR__ . '/studio.php');
-        include(__DIR__ . '/footer.php');
+//        include(__DIR__ . '/footer.php');
     }
-	/*echo '</div>';
-    include(__DIR__ . '/footer.php');*/
 
 ?>
 
