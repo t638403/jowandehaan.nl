@@ -437,12 +437,9 @@ a.navbar-brand {
 }
 
 .item-title-text {
-  /* position:absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) 
-  translateY(-50%);
-  text-align: center; */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 a:hover .item-title {
@@ -508,7 +505,23 @@ body.section-home .grid
 	}
 }
 
-@media (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
+	.grid {
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+	.grid-item {
+		width: calc( (100% / 2) - 15px );
+	}
+	.grid-item:hover .item-title {
+		display: none;
+	}
+	.grid-item:hover .item-image {
+		display: block;
+	}
+}
+
+@media (max-width: 479px) {
 	.grid {
 		margin-left: 0;
 		margin-bottom: 20px;

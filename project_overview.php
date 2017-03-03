@@ -41,7 +41,7 @@
         </div>
         <div class="item-title">
           <div class="item-title-text">
-            <h3>24 uur Rotterdamse Schouwburg</h3>
+            <h3>24/7 Rotterdamse Schouwburg</h3>
           </div>
         </div>
       </a>
